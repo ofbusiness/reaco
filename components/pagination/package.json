@@ -1,0 +1,18 @@
+{
+  "name": "reaco-pagination",
+  "version": "1.0.0",
+  "description": "A ReactJS component that creates a pagination.",
+  "main": "pagination.component.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ofbusiness/reaco/components/pagination"
+  },
+  "author": "Rahul Bansal <rahul.bansal@ofbusiness.in>",
+  "contributors": [
+    "Rahul Bansal <rahul.bansal@ofbusiness.in>"
+  ],
+  "license": "ISC"
+}

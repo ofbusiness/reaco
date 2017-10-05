@@ -1,0 +1,12 @@
+{
+  "name": "reaco",
+  "version": "1.0.0",
+  "description": "react components repo by ofbusiness",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ofbusiness/reaco.git"
+  },
+  "license": "ISC",
+  "homepage": "https://github.com/ofbusiness/reaco#readme"
+}

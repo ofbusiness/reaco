@@ -1,0 +1,18 @@
+{
+  "name": "reaco-table-list",
+  "version": "1.0.0",
+  "description": "A React table component designed to allow presenting thousands of rows of data.",
+  "main": "table-list.component.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ofbusiness/reaco/components/table-list"
+  },
+  "author": "Rahul Bansal <rahul.bansal@ofbusiness.in>",
+  "contributors": [
+    "Rahul Bansal <rahul.bansal@ofbusiness.in>"
+  ],
+  "license": "ISC"
+}
