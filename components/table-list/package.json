@@ -14,5 +14,12 @@
   "contributors": [
     "Rahul Bansal <rahul.bansal@ofbusiness.in>"
   ],
-  "license": "ISC"
+  "license": "ISC",
+  "keywords": [
+    "react",
+    "react-component",
+    "table",
+    "data-table",
+    "fixed-table"
+  ]
 }

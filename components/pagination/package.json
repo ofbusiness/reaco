@@ -14,5 +14,11 @@
   "contributors": [
     "Rahul Bansal <rahul.bansal@ofbusiness.in>"
   ],
-  "license": "ISC"
+  "license": "ISC",
+  "keywords": [
+    "react-component",
+    "paginate",
+    "paginator",
+    "pagination"
+  ]
 }
