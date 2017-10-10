@@ -106,20 +106,20 @@ const tableConfig = {
       handlePageOptionChange={this.onPageOptionChange} />
 ```
 
-See the [App.js](https://github.com/ofbusiness/reaco/blob/master/README.md) with complete code example.
+See the [App.js](https://github.com/ofbusiness/reaco/blob/master/src/App.js) with complete code example.
 
 ## Props
 | Name                          | Type        | Description                                                                             |
 | ---                           | ---         | ---                                                     
-| `tableConfig`                 | `Object`    | **Required.** The complete configuration of table data. See [Code Example](#code-example) for in detail.
-| `rowsCount`                   | `Number`    | **Required.** The total number of rows per page that will be calculated by component.  
-| `total`                       | `Number`    | **Required.** The total number of rows/data across the pages.
-| `size`                        | `Number`    | **Required.** The total number of maximum data per page i.e per page count.
-| `dataSize`                    | `Number`    | **Required.** The total number of minimum data per page i.e there may be least items on last page.
+| `tableConfig`                 | `Object`    | **Required.** The complete configuration of table data. See [Code Example](#code-example) for detail.
+| `rowsCount`                   | `Number`    | **Required.** The least number of rows per page i.e there may be less items on last page in compare to maximum count per page.  
+| `total`                       | `Number`    | **Required.** The total number of data across the pages.
+| `size`                        | `Number`    | **Required.** The total number of maximum rows per page i.e per page count.
+| `dataSize`                    | `Number`    | **Required.** The least number of rows per page i.e there may be less items on last page in compare to maximum count per page.
 | `width`                       | `Number`    | **Optional.** The width of table.  
 | `height`                      | `Number`    | **Optional.** The height of table. 
 | `headerHeight`                | `Number`    | **Optional.** The height of header. 
-| `rowHeight`                   | `Number`    | **Optional.** The height of row.  
-| `forcePage`                   | `Number`    | **Optional.** This is current page index will be used by pagination and table list both component.
+| `rowHeight`                   | `Number`    | **Optional.** The height of each row.  
+| `forcePage`                   | `Number`    | **Optional.** This is current page index will be use by pagination component.
 
 See the full Documentation of **fixed-data-table-2** [here](https://github.com/schrodinger/fixed-data-table-2).

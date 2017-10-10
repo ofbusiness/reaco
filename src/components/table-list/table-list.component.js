@@ -75,7 +75,7 @@ import {
     SORT_TYPES
 } from './table-list.constants';
 import SortHeaderCell from './table-list-sort.component';
-import Pagination from './../pagination/pagination.component';
+import Pagination from 'reaco-pagination';
 
 const LinkCell = ({rowIndex, data, col, config, ...props}) => {
     return <Cell {...props}>

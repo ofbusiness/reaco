@@ -27,15 +27,15 @@ import Pagination from 'reaco-pagination';
       handlePageOptionChange={this.onPageOptionChange} />
 ```
 
-See the [App.js](https://github.com/ofbusiness/reaco/blob/master/README.md) with complete code example.
+See the [App.js](https://github.com/ofbusiness/reaco/blob/master/src/App.js) with complete code example.
 
 ## Props
 | Name                                       | Type        | Description  
 | ---                                        | ---         | ---                                        
-| `total`                                    | `Number`    | **Required.** The total number of rows/data across the pages.
+| `total`                                    | `Number`    | **Required.** The total number of data across the pages.
 | `size`                                     | `Number`    | **Required.** The total number of maximum data per page i.e per page count.
-| `dataSize`                                 | `Number`    | **Required.** The total number of minimum data per page i.e there may be least items on last page.
-| `forcePage`                                | `Number`    | **Optional.** This is current page index will be used by pagination and table list both component.
+| `dataSize`                                 | `Number`    | **Required.** The least number of rows per page i.e there may be less items on last page in compare to maximum count per page.
+| `forcePage`                                | `Number`    | **Optional.** This is current page index.
 | `handlePageChange`                         | `Function`  | **Optional.** This is the callback function hits on page number's click.
 | `handlePageOptionChange`                   | `Function`  | **Optional.** This is the callback function hits on page count option's click.
 | `pageOptions`                              | `Array`     | **Optional.** This is list of different page counts. ex: [10, 25, 50, 100]
