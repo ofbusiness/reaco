@@ -68,7 +68,6 @@ import {
     isArray,
     isFunction
 } from 'lodash';
-import './../table-list.css';
 import { Table, Column, Cell } from 'fixed-data-table-2';
 import {
     CELL_TYPES,

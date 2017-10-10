@@ -1,6 +1,6 @@
 {
   "name": "reaco-table-list",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A React table component designed to allow presenting thousands of rows of data.",
   "main": "dist/table-list.component.js",
   "scripts": {

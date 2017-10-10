@@ -24,8 +24,6 @@ var _dateformat2 = _interopRequireDefault(_dateformat);
 
 var _lodash = require('lodash');
 
-require('./../table-list.css');
-
 var _fixedDataTable = require('fixed-data-table-2');
 
 var _tableList = require('./table-list.constants');

@@ -31,6 +31,16 @@ Using npm:
 $ npm install --save reaco-table-list
 ```
 
+Include module:
+```javascript
+import Pagination from 'reaco-table-list';
+```
+
+Include style:
+```javascript
+import 'reaco-table-list/table-list.css';
+```
+
 ### Code example
 
 ```javascript

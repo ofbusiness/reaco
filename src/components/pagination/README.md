@@ -11,6 +11,16 @@ Using npm:
 $ npm install --save reaco-pagination
 ```
 
+Include module:
+```javascript
+import Pagination from 'reaco-pagination';
+```
+
+Include style:
+```javascript
+import 'reaco-pagination/pagination.css';
+```
+
 ### Code example
 
 ```javascript
