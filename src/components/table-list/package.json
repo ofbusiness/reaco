@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ofbusiness/reaco/tree/master/components/table-list"
+    "url": "https://github.com/ofbusiness/reaco/tree/master/src/components/table-list"
   },
   "author": "Rahul Bansal <rahul.bansal@ofbusiness.in>",
   "contributors": [
@@ -21,5 +21,11 @@
     "table",
     "data-table",
     "fixed-table"
-  ]
+  ],
+  "dependencies": {
+    "dateformat": "^3.0.2",
+    "fixed-data-table-2": "^0.8.1",
+    "lodash": "^4.17.4",
+    "reaco-pagination": "^1.0.1"
+  }
 }

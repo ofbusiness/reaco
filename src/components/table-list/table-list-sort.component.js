@@ -17,12 +17,11 @@ export default class SortHeaderCell extends Component {
     renderSortArrow(sortDir) {
         const tableConfig = this.props.tableConfig;
         const sortIcon = sortDir ? (sortDir === SORT_TYPES.DESC ? ( tableConfig && tableConfig.sortDownIcon ) : ( tableConfig && tableConfig.sortUpIcon )) : '';
-        return sortIcon;
+        return <span className="sortArrow">{sortIcon}</span>;
     }
 
     _onSortChange(e) {
         e.preventDefault();
-
         if (this.props.onSortChange) {
             this.props.onSortChange(
                 this.props.columnKey,
@@ -34,7 +33,7 @@ export default class SortHeaderCell extends Component {
     render() {
         const {sortDir, children} = this.props;
         return (
-            <a onClick={this._onSortChange}>
+            <a className="sortEnabled" onClick={this._onSortChange}>
                 {children} 
                 {this.renderSortArrow(sortDir)}
             </a>

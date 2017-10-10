@@ -39,21 +39,25 @@ export default class Pagination extends Component {
         this.handlePageOptionChange = this.handlePageOptionChange.bind(this);
 
         //default state init
-        this.getInitialState();
+        this.state = this.getInitialState(props);
     }
 
-    getInitialState() {
-        const currentPageNumber = this.props.forcePage + 1;
-        const currentPageSize = this.props.size;
+    componentWillReceiveProps(nextProps) {
+        this.setState(this.getInitialState(nextProps));
+    }
+
+    getInitialState(props) {
+        const currentPageNumber = props.forcePage + 1;
+        const currentPageSize = props.size;
         const currentFirstPage = ((currentPageNumber * currentPageSize) - currentPageSize) + 1;
-        const currentLastPage = (currentPageNumber * currentPageSize) - (currentPageSize - this.props.dataSize);
+        const currentLastPage = (currentPageNumber * currentPageSize) - (currentPageSize - props.dataSize);
         const state = {
             firstPage: currentFirstPage,
             lastPage: currentLastPage,
-            totalPages: this.props.total,
+            totalPages: props.total,
             currentPageOption: currentPageSize
         };
-        this.state = state;
+        return state;
     }
 
     getPageSummary() {
@@ -61,9 +65,9 @@ export default class Pagination extends Component {
         const lastPage = this.state.lastPage;
         const totalPages = this.state.totalPages;
         const pageSummaryText = this.props.pageSummaryText
-                                    .replace('#first_page#', firstPage)
-                                    .replace('#last_page#', lastPage)
-                                    .replace('#total_pages#', totalPages);
+                                    .replace('#first_count#', firstPage)
+                                    .replace('#last_count#', lastPage)
+                                    .replace('#total_counts#', totalPages);
         return <div dangerouslySetInnerHTML={{ __html: pageSummaryText }} ></div>;
     }
 
@@ -124,6 +128,7 @@ Pagination.propTypes = {
     total: PropTypes.number.isRequired,
     size: PropTypes.number.isRequired,
     dataSize: PropTypes.number.isRequired,
+    forcePage: PropTypes.number,
     handlePageChange: PropTypes.func,
     handlePageOptionChange: PropTypes.func,
     pageOptions: PropTypes.array,
@@ -131,6 +136,7 @@ Pagination.propTypes = {
 }
 
 Pagination.defaultProps = {
+    forcePage: 0,
     handlePageChange: null,
     handlePageOptionChange: null,
     pageOptions: PAGE_OPTIONS,

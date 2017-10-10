@@ -1,0 +1,79 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  padding: 20px;
+  color: white;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 90px;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.container { padding: 20px; padding-top: 150px; }
+
+.leftSideBar {
+  cursor: default;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  font-size: 0.825em;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 0;
+  margin: 135px 0 100px;
+}
+
+.leftSideBar .scrollContent {
+  box-sizing: border-box;
+  height: 100%;
+  overflow: auto;
+  width: 160px;
+  text-align: left;
+}
+
+.leftSideBar .scrollContent a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+.leftSideBar .scrollContent a:hover {
+  text-decoration: underline;
+}
+
+.content {
+  font-size: 12px;
+  margin-left: 160px;
+  text-align: left;
+}
+
+.fixedDataTableCellLayout_main {
+  display: table !important;
+}
+.fixedDataTableCellLayout_main a.sortEnabled { color: #4183C4; cursor: pointer; display: table-cell; vertical-align: middle; position: relative; }
+.fixedDataTableCellLayout_main .sortArrow { display: table-cell; vertical-align: middle; position: absolute; right: 5px; top: 50%; margin-top: -9px; }

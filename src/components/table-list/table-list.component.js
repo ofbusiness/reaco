@@ -1,13 +1,14 @@
 /**
  * TableList is component to render data as list
- * ex: <TableList tableConfig={tableConfig} />
+ * ex: <TableList tableConfig={tableConfig} rowsCount={10} total={100} size={10} dataSize={10} />
  *  props: tableConfig: //(Object || Required) it is required and must be in below format
  *          {
  *              sortUpIcon: <i class="material-icons">&#xE5DB;</i>, //(String | Optional) :- sort up arrow, default is null
  *              sortDownIcon: <i class="material-icons">&#xE5DB;</i>, //(String | Optional) :- sort down arrow, default is null
  *              sortByField: 'age', //(String | Optional) :- enable sort for specific by default
  *              sortDirection: 'ASC | DESC', //(String | Optional) :- direction for default enabled sort, default is DESC
- *              sortCallback: func, //(Function | Optional) :- it calls after sort applied,             
+ *              sortCallback: func, //(Function | Optional) :- it calls after sort applied,   
+ *              total:           
  *              columns: { //(Object | Required) :- columns config
  *                  name: {
  *                      header: 'name', //(String | Required) :- column title
@@ -54,7 +55,7 @@
  *              }]
  *          }
  * 
- * note: <TableList /> uses npm's 'fixed-data-table', 'react-paginate' & 'ofb-paginate' components. so can pass their props directly.
+ * note: <TableList /> uses npm's 'fixed-data-table-2', 'reaco-pagination' components. so can pass their props directly.
 */
 
 import React, { Component } from 'react';
@@ -68,13 +69,13 @@ import {
     isFunction
 } from 'lodash';
 import './table-list.css';
-import { Table, Column, Cell } from 'fixed-data-table';
+import { Table, Column, Cell } from 'fixed-data-table-2';
 import {
     CELL_TYPES,
     SORT_TYPES
 } from './table-list.constants';
 import SortHeaderCell from './table-list-sort.component';
-import Pagination from 'reaco-pagination';
+import Pagination from './../pagination/pagination.component';
 
 const LinkCell = ({rowIndex, data, col, config, ...props}) => {
     return <Cell {...props}>
