@@ -12,4 +12,4 @@ $ yarn run start
 ```
 
 It will start a page on http://localhost:3000, which shows examples of all components.
-For brief description, go to `src/components\[component name]` folder.
+For brief description, go to `src/components/[component name]` folder.
