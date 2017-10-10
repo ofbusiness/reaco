@@ -4,7 +4,7 @@ Reaco-Table-List is a React component for building and presenting data in a flex
 
 The table was designed to handle thousands of rows of data without sacrificing performance. Scrolling smoothly is a first-class goal of Reaco-Table-List and it's architected in a way to allow for flexibility and extensibility.
 
-Reaco-Table-List is written over [schrodinger/fixed-data-table-2](https://github.com/schrodinger/fixed-data-table-2).\s\s
+Reaco-Table-List is written over [schrodinger/fixed-data-table-2](https://github.com/schrodinger/fixed-data-table-2).
 For pagination it uses [Reaco-Pagination](https://github.com/ofbusiness/reaco/tree/master/src/components/pagination), so you can directly use its properties here to manage pagination.
 
 Features of Reaco-Table-List:
