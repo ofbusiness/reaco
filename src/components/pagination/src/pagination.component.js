@@ -22,7 +22,7 @@ import {
     isFunction
 } from 'lodash';
 import classNames from 'classnames';
-import './pagination.css';
+import './../pagination.css';
 import { 
     PAGE_OPTIONS, 
     PAGE_SUMMARY 

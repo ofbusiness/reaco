@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Switch, Route, Link } from 'react-router-dom';
-import TableList from './components/table-list/table-list.component';
-import Pagination from './components/pagination/pagination.component';
-import { SORT_TYPES } from './components/table-list/table-list.constants';
+import TableList from 'reaco-table-list';
+import Pagination from 'reaco-pagination';
+import { SORT_TYPES } from './components/table-list/src/table-list.constants';
 import './App.css';
 
 const randomData = [{

@@ -1,10 +1,11 @@
 {
   "name": "reaco-table-list",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "description": "A React table component designed to allow presenting thousands of rows of data.",
-  "main": "table-list.component.js",
+  "main": "dist/table-list.component.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "babel ./src --out-dir ./dist --source-maps --presets es2015,stage-0,react"
   },
   "repository": {
     "type": "git",
@@ -27,5 +28,13 @@
     "fixed-data-table-2": "^0.8.1",
     "lodash": "^4.17.4",
     "reaco-pagination": "^1.0.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.8",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0"
   }
 }
