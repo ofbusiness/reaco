@@ -27,6 +27,9 @@ import {
     PAGE_SUMMARY 
 } from './pagination.constants';
 
+/* style */
+import cssStyle from './pagination';
+
 export default class Pagination extends Component {
     constructor(props) {
         super(props);
@@ -39,6 +42,15 @@ export default class Pagination extends Component {
 
         //default state init
         this.state = this.getInitialState(props);
+    }
+
+    componentDidMount() {
+        if (!document.getElementsByTagName('head')[0].querySelector('style[id="react-pagination"]')) {
+            let tag = document.createElement('style');
+            tag.id = 'react-pagination';
+            tag.innerHTML = cssStyle;
+            document.getElementsByTagName('head')[0].appendChild(tag);
+        }
     }
 
     componentWillReceiveProps(nextProps) {

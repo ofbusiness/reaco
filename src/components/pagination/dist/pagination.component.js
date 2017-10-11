@@ -28,6 +28,10 @@ var _classnames2 = _interopRequireDefault(_classnames);
 
 var _pagination = require('./pagination.constants');
 
+var _pagination2 = require('./pagination');
+
+var _pagination3 = _interopRequireDefault(_pagination2);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -50,6 +54,9 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 * Note: this component uses npm's react-paginate, so can pass it's supported props directly.
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
 
+/* style */
+
+
 var Pagination = function (_Component) {
     _inherits(Pagination, _Component);
 
@@ -70,6 +77,16 @@ var Pagination = function (_Component) {
     }
 
     _createClass(Pagination, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            if (!document.getElementsByTagName('head')[0].querySelector('style[id="react-pagination"]')) {
+                var tag = document.createElement('style');
+                tag.id = 'react-pagination';
+                tag.innerHTML = _pagination3.default;
+                document.getElementsByTagName('head')[0].appendChild(tag);
+            }
+        }
+    }, {
         key: 'componentWillReceiveProps',
         value: function componentWillReceiveProps(nextProps) {
             this.setState(this.getInitialState(nextProps));

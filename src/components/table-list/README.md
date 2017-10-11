@@ -31,16 +31,6 @@ Using npm:
 $ npm install --save reaco-table-list
 ```
 
-Include module:
-```javascript
-import Pagination from 'reaco-table-list';
-```
-
-Include style:
-```javascript
-import 'reaco-table-list/table-list.css';
-```
-
 ### Code example
 
 ```javascript
@@ -116,7 +106,7 @@ const tableConfig = {
       handlePageOptionChange={this.onPageOptionChange} />
 ```
 
-See the [App.js](https://github.com/ofbusiness/reaco/blob/master/src/App.js) with complete code example.
+See the [App.js](https://github.com/ofbusiness/reaco/blob/master/src/App.js) for complete code example.
 
 ## Props
 | Name                          | Type        | Description                                                                             |

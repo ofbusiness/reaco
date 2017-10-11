@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route, Link } from 'react-router-dom';
-import 'reaco-table-list/table-list.css';
 import TableList from 'reaco-table-list';
-import 'reaco-pagination/pagination.css';
 import Pagination from 'reaco-pagination';
 import { SORT_TYPES } from './components/table-list/src/table-list.constants';
 import './App.css';

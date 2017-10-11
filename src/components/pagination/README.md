@@ -11,16 +11,6 @@ Using npm:
 $ npm install --save reaco-pagination
 ```
 
-Include module:
-```javascript
-import Pagination from 'reaco-pagination';
-```
-
-Include style:
-```javascript
-import 'reaco-pagination/pagination.css';
-```
-
 ### Code example
 
 ```javascript
@@ -37,7 +27,7 @@ import Pagination from 'reaco-pagination';
       handlePageOptionChange={this.onPageOptionChange} />
 ```
 
-See the [App.js](https://github.com/ofbusiness/reaco/blob/master/src/App.js) with complete code example.
+See the [App.js](https://github.com/ofbusiness/reaco/blob/master/src/App.js) for complete code example.
 
 ## Props
 | Name                                       | Type        | Description  

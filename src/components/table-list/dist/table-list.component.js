@@ -36,6 +36,10 @@ var _reacoPagination = require('reaco-pagination');
 
 var _reacoPagination2 = _interopRequireDefault(_reacoPagination);
 
+var _tableList2 = require('./table-list');
+
+var _tableList3 = _interopRequireDefault(_tableList2);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -105,6 +109,9 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
                                                                                                                                                                                                                               * 
                                                                                                                                                                                                                               * note: <TableList /> uses npm's 'fixed-data-table-2', 'reaco-pagination' components. so can pass their props directly.
                                                                                                                                                                                                                              */
+
+/* style */
+
 
 var LinkCell = function LinkCell(_ref) {
     var rowIndex = _ref.rowIndex,
@@ -181,6 +188,16 @@ var TableList = function (_Component) {
     }
 
     _createClass(TableList, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            if (!document.getElementsByTagName('head')[0].querySelector('style[id="react-table-list"]')) {
+                var tag = document.createElement('style');
+                tag.id = 'react-table-list';
+                tag.innerHTML = _tableList3.default;
+                document.getElementsByTagName('head')[0].appendChild(tag);
+            }
+        }
+    }, {
         key: 'getDefaultSortDir',
         value: function getDefaultSortDir(column, columnName) {
             if (!(0, _lodash.isEmpty)(column) && !(0, _lodash.isEmpty)(columnName) && column.sortEnable) {

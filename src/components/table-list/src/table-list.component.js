@@ -76,6 +76,9 @@ import {
 import SortHeaderCell from './table-list-sort.component';
 import Pagination from 'reaco-pagination';
 
+/* style */
+import cssStyle from './table-list';
+
 const LinkCell = ({rowIndex, data, col, config, ...props}) => {
     return <Cell {...props}>
         <a className="table-list-link table-list-val" title={data[rowIndex][col].title || ''} href={data[rowIndex][col].url} onClick={data[rowIndex][col].action}>{data[rowIndex][col].value || '-'}</a>
@@ -111,6 +114,15 @@ export default class TableList extends Component {
         this.getColumnHeaderCell = this.getColumnHeaderCell.bind(this);
         this.getDefaultSortDir = this.getDefaultSortDir.bind(this);
         this.onSortChange = this.onSortChange.bind(this);
+    }
+
+    componentDidMount() {
+        if (!document.getElementsByTagName('head')[0].querySelector('style[id="react-table-list"]')) {
+            let tag = document.createElement('style');
+            tag.id = 'react-table-list';
+            tag.innerHTML = cssStyle;
+            document.getElementsByTagName('head')[0].appendChild(tag);
+        }
     }
 
     getDefaultSortDir(column, columnName) {

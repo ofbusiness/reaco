@@ -1,0 +1,31 @@
+var sass = require('node-sass')
+var fs = require('fs')
+var path = require('path')
+
+function transferSass () {
+  sass.render({
+    file: path.resolve(__dirname, '../pagination.scss'),
+    outputStyle: 'compressed'
+  }, function (err, result) {
+    if (err) {
+      console.log(err)
+      return
+    }
+    var cssSource = result.css.toString()
+    fs.writeFile(path.resolve(__dirname, '../src/pagination.js'), "export default \"" + cssSource.replace(/\n/g, '') + "\";", function (err) {
+      if (err) {
+        console.error(err)
+      }
+      console.log('css file has been transformed to JS successful')
+      fs.writeFile(path.resolve(__dirname, '../pagination.css'), cssSource, function (err) {
+        if (err) {
+          console.error(err)
+        }
+        console.log('css file has been transformed successful')
+        process.exit()
+      })
+    })
+  })
+}
+
+transferSass();

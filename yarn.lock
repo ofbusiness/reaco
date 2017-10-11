@@ -5169,30 +5169,22 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-reaco-pagination@1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/reaco-pagination/-/reaco-pagination-1.0.6.tgz#62eead199ffc9eadbec6bfcf250909dffb83a0c5"
+reaco-pagination@1.0.7, reaco-pagination@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/reaco-pagination/-/reaco-pagination-1.0.7.tgz#101c3a964b1d2cb0d752cd4640de2d3adbb715d5"
   dependencies:
     classnames "^2.2.5"
     lodash "^4.17.4"
     react-paginate "^4.4.4"
 
-reaco-pagination@^1.0.1:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/reaco-pagination/-/reaco-pagination-1.0.5.tgz#4c3118edddf7946647bcc60bd9e352901b81a14f"
-  dependencies:
-    classnames "^2.2.5"
-    lodash "^4.17.4"
-    react-paginate "^4.4.4"
-
-reaco-table-list@1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/reaco-table-list/-/reaco-table-list-1.0.5.tgz#7f7b71abdb1b3ba3a5e7a13641662603093c0d9a"
+reaco-table-list@1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/reaco-table-list/-/reaco-table-list-1.0.7.tgz#74e567e4d1c533862cc82df21efadd1a708730fc"
   dependencies:
     dateformat "^3.0.2"
     fixed-data-table-2 "^0.8.1"
     lodash "^4.17.4"
-    reaco-pagination "^1.0.1"
+    reaco-pagination "^1.0.7"
 
 react-addons-create-fragment@^15.0.0:
   version "15.6.2"

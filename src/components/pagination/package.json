@@ -1,11 +1,13 @@
 {
   "name": "reaco-pagination",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A ReactJS component that creates a pagination.",
   "main": "dist/pagination.component.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublish": "babel ./src --out-dir ./dist --source-maps --presets es2015,stage-0,react"
+    "transform:css": "node bin/transformCSS.js",
+    "transform:js": "babel ./src --out-dir ./dist --source-maps --presets es2015,stage-0,react",
+    "prepublish": "yarn run transform:css && yarn run transform:js"
   },
   "repository": {
     "type": "git",
@@ -33,6 +35,9 @@
     "babel-loader": "^6.2.8",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-react": "^6.16.0",
-    "babel-preset-stage-0": "^6.16.0"
+    "babel-preset-stage-0": "^6.16.0",
+    "fs": "^0.0.1-security",
+    "node-sass": "^4.5.3",
+    "path": "^0.12.7"
   }
 }
