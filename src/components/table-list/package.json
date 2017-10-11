@@ -27,7 +27,7 @@
     "dateformat": "^3.0.2",
     "fixed-data-table-2": "^0.8.1",
     "lodash": "^4.17.4",
-    "reaco-pagination": "^1.0.1"
+    "reaco-pagination": "^1.0.7"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
