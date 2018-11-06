@@ -1,6 +1,6 @@
 {
   "name": "reaco-pagination",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A ReactJS component that creates a pagination.",
   "main": "dist/pagination.component.js",
   "scripts": {
